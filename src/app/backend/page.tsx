@@ -157,10 +157,11 @@ function HeroSection() {
                     transition={{ duration: 0.7, delay: 0.1 }}
                     className="flex flex-col items-center mb-6"
                 >
-                    <div className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight inline-flex items-center gap-4" style={{ color: "#1a1a1a" }}>
+                    <div className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight flex flex-wrap justify-center items-center gap-x-4 gap-y-2" style={{ color: "#1a1a1a" }}>
                         <SplitText text="I'm" delay={60} animationFrom={{ opacity: 0, transform: 'translate3d(0,30px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutExpo" />
                         <ShinyText
                             text="Adarsh M"
+                            className="whitespace-nowrap"
                             speed={3}
                             color="#3171C6"
                             shineColor="#4a90d9"
