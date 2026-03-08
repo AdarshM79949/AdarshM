@@ -2,23 +2,24 @@
 
 import React from "react";
 
-interface StarBorderProps {
-    as?: React.ElementType;
+type StarBorderProps<T extends React.ElementType> = {
+    as?: T;
     className?: string;
     color?: string;
     speed?: string;
-    children: React.ReactNode;
-    [key: string]: any;
-}
+    children?: React.ReactNode;
+} & React.ComponentPropsWithoutRef<T>;
 
-const StarBorder: React.FC<StarBorderProps> = ({
-    as: Component = "button",
+export default function StarBorder<T extends React.ElementType = "button">({
+    as,
     className = "",
     color = "white",
     speed = "6s",
     children,
     ...rest
-}) => {
+}: StarBorderProps<T>) {
+    const Component = as || "button";
+
     return (
         <Component
             className={`relative inline-block py-[1px] overflow-hidden rounded-[20px] ${className}`}
@@ -43,6 +44,4 @@ const StarBorder: React.FC<StarBorderProps> = ({
             </div>
         </Component>
     );
-};
-
-export default StarBorder;
+}
