@@ -612,7 +612,9 @@ function ProjectsSection() {
                                     </Magnet>
                                     <Magnet padding={40} magnetStrength={3} wrapperClassName="inline-block">
                                         <a
-                                            href="#"
+                                            href="https://vermos-vert.vercel.app/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 hover:bg-[rgba(49,113,198,0.05)]"
                                             style={{ border: "2px solid rgba(49,113,198,0.2)", color: "#2D2D2D" }}
                                         >
