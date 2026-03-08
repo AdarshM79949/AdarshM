@@ -18,7 +18,7 @@ export default function StarBorder<T extends React.ElementType = "button">({
     children,
     ...rest
 }: StarBorderProps<T>) {
-    const Component = as || "button";
+    const Component = (as || "button") as any;
 
     return (
         <Component
